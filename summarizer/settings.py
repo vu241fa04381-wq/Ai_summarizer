@@ -31,7 +31,11 @@ SECRET_KEY = 'django-insecure-j(l(3vccxwyc2x67+63-u5-8kuud3*y*k0y7u11^6=68cn+q^7
 DEBUG = True
 
 # 1. Allow Render to route traffic to your app
-ALLOWED_HOSTS = ['*'] 
+ALLOWED_HOSTS = [
+    "your-app-name.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 # 2. Prevent Django from blocking forms and secure requests on Render
 CSRF_TRUSTED_ORIGINS = ['https://*.onrender.com']
@@ -57,7 +61,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    ...
 ]
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 ROOT_URLCONF = 'summarizer.urls'
 
