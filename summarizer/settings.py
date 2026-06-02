@@ -131,7 +131,7 @@ STATICFILES_DIRS = os.environ.get('STATICFILES_DIRS', [BASE_DIR / 'static'])
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-'DIRS': os.environ.get('TEMPLATE_DIRS', [BASE_DIR / 'templates']),
+'DIRS': os.environ.get('TEMPLATE_DIRS', [BASE_DIR / 'templates'])
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
